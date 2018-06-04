@@ -1,0 +1,29 @@
+train:
+  root: train_logs
+  dataset_name: funiture
+  dataset_split_name: train
+  dataset_dir: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture
+
+eval:
+  root: eval_logs
+  dataset_name: furniture
+  dataset_dir: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture 
+  dataset_split_name: validation
+
+test:
+  root: test_logs
+  list: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture/test.txt
+  dataset_dir: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture/test
+
+model:
+  inception_v4:
+    train_dir: inception_v4
+    model_name: inception_v4
+    checkpoint_path: ./checkpoints/inception_v4.ckpt
+    checkpoint_exclude_scopes: InceptionV4/Logits,InceptionV4/AuxLogits 
+
+  resnet_v2_152:
+    train_dir: resnet_v2_152
+    model_name: resnet_v2_152
+    checkpoint_path: ./checkpoints/resnet_v2_152.ckpt
+    checkpoint_exclude_scopes: resnet_v2_152/logits

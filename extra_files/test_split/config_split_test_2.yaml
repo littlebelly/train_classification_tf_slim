@@ -1,0 +1,29 @@
+train:
+  root: train_logs
+  dataset_name: funiture
+  dataset_split_name: train
+  dataset_dir: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture
+
+eval:
+  root: eval_logs
+  dataset_name: furniture
+  dataset_dir: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture 
+  dataset_split_name: validation
+
+test:
+  root: test_logs
+  list: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture/test.txt
+  dataset_dir: /data1/jayzjwang/code_res/kaggle_fashion/data/iMaterial_Furniture/test
+
+model:
+  nasnet_large:
+    train_dir: nasnet_large
+    model_name: nasnet_large
+    checkpoint_path: ./checkpoints/nasnet-a_large_04_10_2017/model.ckpt
+    checkpoint_exclude_scopes: final_layer,aux_11
+
+  pnasnet_large:
+    train_dir: pnasnet_large
+    model_name: pnasnet_large
+    checkpoint_path: ./checkpoints/pnasnet-5_large_2017_12_13/model.ckpt
+    checkpoint_exclude_scopes: final_layer,aux_7
