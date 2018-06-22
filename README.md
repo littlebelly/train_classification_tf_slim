@@ -5,7 +5,7 @@ rank: 22 / 436 [leaderboard](https://www.kaggle.com/c/imaterialist-challenge-fur
 ## Source Codes
 [link](https://github.com/tensorflow/models/tree/master/research/slim)
 
-## Usage
+## Usage Examples
 python train.py -m inception_v3 -g 0 <br>
 python eval.py -g 1 <br>
 python test.py -g 2 <br>
