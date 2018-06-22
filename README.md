@@ -1,5 +1,7 @@
 # iMaterialist Challenge (Furniture) at FGVC5
 
+rank: 22 / 436 [leaderboard](https://www.kaggle.com/c/imaterialist-challenge-furniture-2018/leaderboard)
+
 ## Source Codes
 [link](https://github.com/tensorflow/models/tree/master/research/slim)
 
