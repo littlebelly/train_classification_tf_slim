@@ -19,30 +19,30 @@ def main():
     num = args.num
     clean_up = args.clean_up
 
-#    if clean_up:
-#       old_files = glob.glob(os.path.join('extra_files', 'txt_list', '*.txt'))
-#       for old_file in old_files:
-#           os.remove(old_file)
-#    
-#    path_all = os.listdir(root)
-#    print('copying...')
-#    for path in path_all:
-#        path = os.path.join(root, path)
-#        ckpt_list = glob.glob(os.path.join(path, '*.txt'))
-#        ckpt_num_list = []
-#        for ckpt in ckpt_list:
-#            ckpt = re.findall(r"\d+", ckpt)
-#            ckpt = ckpt[-1]
-#            ckpt = int(ckpt)
-#            ckpt_num_list.append(ckpt)
-#        ckpt_num_list.sort(reverse=True)
-#        for i in range(1, num+1):
-#            ckpt_num = ckpt_num_list[i]
-#            _tmp_path = path + '/*' + str(ckpt_num) + '.txt'
-#            file_name = glob.glob(_tmp_path)
-#            file_name = file_name[0]
-#            new_file_name = os.path.join('extra_files', 'txt_list', file_name[len(path)+1:])
-#            shutil.copy(file_name, new_file_name)
+    if clean_up:
+       old_files = glob.glob(os.path.join('extra_files', 'txt_list', '*.txt'))
+       for old_file in old_files:
+           os.remove(old_file)
+    
+    path_all = os.listdir(root)
+    print('copying...')
+    for path in path_all:
+        path = os.path.join(root, path)
+        ckpt_list = glob.glob(os.path.join(path, '*.txt'))
+        ckpt_num_list = []
+        for ckpt in ckpt_list:
+            ckpt = re.findall(r"\d+", ckpt)
+            ckpt = ckpt[-1]
+            ckpt = int(ckpt)
+            ckpt_num_list.append(ckpt)
+        ckpt_num_list.sort(reverse=True)
+        for i in range(1, num+1):
+            ckpt_num = ckpt_num_list[i]
+            _tmp_path = path + '/*' + str(ckpt_num) + '.txt'
+            file_name = glob.glob(_tmp_path)
+            file_name = file_name[0]
+            new_file_name = os.path.join('extra_files', 'txt_list', file_name[len(path)+1:])
+            shutil.copy(file_name, new_file_name)
 
     print('ensembling...')
     file_dict = {}
