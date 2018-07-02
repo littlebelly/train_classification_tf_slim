@@ -1,6 +1,6 @@
 # iMaterialist Challenge (Furniture) at FGVC5
 
-rank: 22 / 436 [leaderboard](https://www.kaggle.com/c/imaterialist-challenge-furniture-2018/leaderboard)
+rank: 20 / 436 [leaderboard](https://www.kaggle.com/c/imaterialist-challenge-furniture-2018/leaderboard)
 
 ## Source Codes
 [link](https://github.com/tensorflow/models/tree/master/research/slim)
@@ -9,7 +9,7 @@ rank: 22 / 436 [leaderboard](https://www.kaggle.com/c/imaterialist-challenge-fur
 python train.py -m inception_v3 -g 0 <br>
 python eval.py -g 1 <br>
 python test.py -g 2 <br>
-python ensemble -n 5 -r ./test_logs -c True <br>
+python all.py -n 5 -r ./test_logs -c True <br>
 
 ## Pre-trained Models (2018.6.4)
 Model | TF-Slim File | Checkpoint | Top-1 Accuracy| Top-5 Accuracy |
